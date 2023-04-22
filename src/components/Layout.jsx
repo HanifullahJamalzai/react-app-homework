@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 import img from "../assets/star-wars-logo-981.png";
 function Layout() {
 	return (
@@ -7,36 +7,71 @@ function Layout() {
 			<header className="flex flex-row justify-between">
 				<img src={img} alt="" width={100} />
 				<ul className="flex flex-row space-x-2">
-					<Link
-						to="/"
-						className="hover:underline decoration-amber-500 underline-offset-8"
+					<NavLink
+						to="/films"
+						className={({ isActive }) =>
+							[
+								"hover:underline decoration-amber-500 underline-offset-8",
+								isActive
+									? "underline decoration-amber-500 underline-offset-8 text-amber-500 font-bold"
+									: "",
+							].join(" ")
+						}
 					>
 						Films
-					</Link>
-					<Link
-						to="/"
-						className="hover:underline decoration-amber-500 underline-offset-8"
+					</NavLink>
+					<NavLink
+						to="/people"
+						className={({ isActive }) =>
+							[
+								"hover:underline decoration-amber-500 underline-offset-8",
+								isActive
+									? "underline decoration-amber-500 underline-offset-8 text-amber-500"
+									: "",
+							].join(" ")
+						}
 					>
 						People
-					</Link>
-					<Link
-						to="/"
-						className="hover:underline decoration-amber-500 underline-offset-8"
+					</NavLink>
+					<NavLink
+						to="/planet"
+						className={({ isActive }) =>
+							[
+								"hover:underline decoration-amber-500 underline-offset-8",
+								isActive
+									? "underline decoration-amber-500 underline-offset-8 text-amber-500"
+									: "",
+							].join(" ")
+						}
 					>
-						Planet
-					</Link>
-					<Link
-						to="/"
-						className="hover:underline decoration-amber-500 underline-offset-8"
+						Planets
+					</NavLink>
+					<NavLink
+						to="/species"
+						className={({ isActive }) =>
+							[
+								"hover:underline decoration-amber-500 underline-offset-8",
+								isActive
+									? "underline decoration-amber-500 underline-offset-8 text-amber-500"
+									: "",
+							].join(" ")
+						}
 					>
 						Species
-					</Link>
-					<Link
-						to="/"
-						className="hover:underline decoration-amber-500 underline-offset-8"
+					</NavLink>
+					<NavLink
+						to="/vehicles"
+						className={({ isActive }) =>
+							[
+								"hover:underline decoration-amber-500 underline-offset-8",
+								isActive
+									? "underline decoration-amber-500 underline-offset-8 text-amber-500"
+									: "",
+							].join(" ")
+						}
 					>
-						Vehicle
-					</Link>
+						Vehicles
+					</NavLink>
 				</ul>
 			</header>
 			<div className="p-5">
