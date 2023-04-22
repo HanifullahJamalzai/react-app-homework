@@ -5,6 +5,7 @@ import People from "./pages/People";
 import Species from "./pages/Species";
 import Planet from "./pages/Planet";
 import Layout from "./components/Layout";
+import Home from "./pages/Home";
 
 function App() {
 	return (
@@ -13,7 +14,7 @@ function App() {
 				{/* Header here */}
 				<Routes>
 					<Route element={<Layout />}>
-						<Route path="/" element={<>Home</>} />
+						<Route path="/" element={<Home />} />
 						<Route path="/people" element={<People />} />
 						<Route path="/films" element={<Film />} />
 						<Route path="/vehicle" element={<Vehicle />} />
