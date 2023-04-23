@@ -5,7 +5,9 @@ function Layout() {
 	return (
 		<div className="p-6 bg-black text-white">
 			<header className="flex flex-row justify-between">
-				<img src={img} alt="" width={100} />
+				<Link to="/">
+					<img src={img} alt="" width={100} />
+				</Link>
 				<ul className="flex flex-row space-x-2">
 					<NavLink
 						to="/films"
